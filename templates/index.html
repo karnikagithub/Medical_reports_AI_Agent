@@ -1,0 +1,44 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>Medical Report Generator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Medical Report Generator</h1>
+    <form method="POST">
+        <textarea name="user_input" rows="5" cols="50"></textarea><br>
+        <input type="submit" value="Generate Report">
+    </form>
+    {% if response %}
+        <h2>Response:</h2>
+        <p>{{ response }}</p>
+        {% if parsed_report %}
+            <h2>Parsed Report:</h2>
+            <p>Diagnosis: {{ parsed_report.diagnosis }}</p>
+            <p>Treatment: {{ parsed_report.treatment }}</p>
+        {% endif %}
+        {% if pdf_link %}
+            <p><a href="{{ pdf_link }}" target="_blank">Download PDF Report</a></p>
+        {% endif %}
+    {% endif %}
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Medical Report Generator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Medical Report Generator</h1>
+    <form method="POST">
+        <textarea name="user_input" rows="5" cols="50"></textarea><br>
+        <input type="submit" value="Generate Report">
+    </form>
+    {% if pdf_link %}
+        <p><a href="{{ pdf_link }}" target="_blank">Download PDF Report</a></p>
+    {% endif %}
+</body>
+</html>
